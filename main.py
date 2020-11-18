@@ -1,10 +1,17 @@
-import irc
+import irc, os
+os.system('clear')
 
+channel = "#mad-kamel-irc-bots:matrix.org"
+server = "irc.freenode.net"
+nickname = "irkbot"
 
 client = irc.IRC()
+client.connect(server, channel, nickname)
 
-client.connect("chat.freenode.net", "#mad-kamel-irc-bots:matrix.org", "madkamel_irkbot")
 
 while True:
-  if client.get_text() == 'irk-test':
-    print("message recieved")
+  text = client.get_text().decode()
+  print(text)
+
+  if "PRIVMSG" in text and channel in text and "hello" in text:
+    client.send(channel, "Hello!")
