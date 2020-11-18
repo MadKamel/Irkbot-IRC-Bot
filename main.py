@@ -3,7 +3,7 @@ os.system('clear')
 
 channel = "#mad-kamel-irc-bots:matrix.org"
 server = "irc.freenode.net"
-nickname = "irkbot"
+nickname = "madkamel-irkbot"
 
 client = irc.IRC()
 client.connect(server, channel, nickname)
