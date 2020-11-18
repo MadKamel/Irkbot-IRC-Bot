@@ -23,8 +23,8 @@ class IRC:
     print("IRC.connect() finished.")
 
   def get_text(self):
-    text = self.irc.recv(2040)
-    if text.find(('PING').encode('utf-8')) != -1:                      
+    text = self.irc.recv(2040).decode()
+    if text.find('PING') != -1:
       self.irc.send(('PONG ' + text.split()[1] + '\r\n').encode('utf-8')) 
 
     return text
