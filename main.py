@@ -1,7 +1,7 @@
 import irc, os
 os.system('clear')
 
-channel = "#mad-kamel-irc-bots:matrix.org"
+channel = "#madkamel-irkbot-testing"
 server = "irc.freenode.net"
 nickname = "madkamel-irkbot"
 
