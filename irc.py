@@ -17,9 +17,10 @@ class IRC:
     self.irc.connect((server, 6667))
     print("connection complete.")
 
-    self.irc.send(("USER " + botnick + " " + botnick + " " + botnick + " " + botnick + "n").encode('utf-8'))
+    self.irc.send(("USER " + botnick + " " + botnick + " " + botnick + " :(MadKamel) Irkbotn").encode('utf-8'))
     self.irc.send(("NICK " + botnick + "n").encode('utf-8'))
     self.irc.send(("JOIN " + channel + "n").encode('utf-8'))
+    print("IRC.connect() finished.")
 
   def get_text(self):
     text = self.irc.recv(2040)
