@@ -1,5 +1,6 @@
 import irc
 
+
 client = irc.IRC()
 
-client.connect("matrix.org", "#mad-kamel-irc-bots", "Irkbot")
+client.connect("chat.freenode.net", "#mad-kamel-irc-bots:matrix.org", "madkamel_irkbot")

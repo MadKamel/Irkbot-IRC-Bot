@@ -16,7 +16,7 @@ class IRC:
         print("connecting to: " + server)
         self.irc.connect((server, 6667))
         print("connection complete.")
-        self.irc.send("USER " + botnick + " " + botnick + " " + botnick + " :This is a fun bot!n")
+        self.irc.send("USER " + botnick + " " + botnick + " " + botnick + " " + botnick + "n")
         self.irc.send("NICK " + botnick + "n")
         self.irc.send("JOIN " + channel + "n")
 
