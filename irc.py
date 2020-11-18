@@ -10,7 +10,6 @@ class IRC:
     self.irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
   def send(self, chan, msg):
-      
     self.irc.send("PRIVMSG " + chan + " " + msg + "n")
 
   def connect(self, server, channel, botnick):
